@@ -13,11 +13,13 @@ export const useCounter = (initialValue = 10) => {
   };
 
   const reset = () => {
-    setCounter(counter);
+    setCounter(initialValue);
   };
 
   return {
     counter,
     increment,
+    decrement,
+    reset,
   };
 };
