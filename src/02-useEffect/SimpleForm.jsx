@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Message } from "./Message";
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({
@@ -17,18 +18,28 @@ export const SimpleForm = () => {
   };
 
   useEffect(() => {
-    console.log("useEffect called!");
+    // console.log("useEffect called!");
   }, []);
 
   // Este Hook se dispara cada vez que cambia el formulario
   useEffect(() => {
-    console.log("FormState changed!");
+    // console.log("FormState changed!");
   }, [formState]);
 
   // Este Hook se dispara cada vez que cambia el EMAIL
   useEffect(() => {
-    console.log("EMAIL changed!");
+    // console.log("EMAIL changed!");
   }, [email]);
+
+  //
+  // useEffect(() => {
+  //   first;
+
+  //   return () => {
+  //     second;
+  //     //se usa para limpiar events o listeners
+  //   };
+  // }, [third]);
 
   return (
     <>
@@ -50,6 +61,8 @@ export const SimpleForm = () => {
         value={email}
         onChange={onInputChange}
       />
+
+      {username === "jenn" && <Message />}
     </>
   );
 };
