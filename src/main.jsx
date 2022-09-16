@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Memorize } from "./06-memos/Memorize";
+import { CallbackHook } from "./06-memos/CallbackHook";
+import { Padre } from "./07-tarea-memo/Padre";
+// import { MemoHook } from "./06-memos/MemoHook";
+// import { Memorize } from "./06-memos/Memorize";
 // import { Layout } from "./05-useLayoutEfect/Layout";
 // import { FocusScreen } from "./04-useRef/FocusScreen";
 // import { MultipleCustomHook } from "./03-examples/MultipleCustomHook";
@@ -14,6 +17,6 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Memorize />
+    <Padre />
   </React.StrictMode>
 );
